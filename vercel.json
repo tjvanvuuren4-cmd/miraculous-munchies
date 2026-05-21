@@ -2,9 +2,9 @@
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "outputDirectory": "dist",
-  "env": {
-    "GMAIL_USER": "@gmail-user",
-    "GMAIL_PASSWORD": "@gmail-app-password",
-    "VITE_WHATSAPP_NUMBER": "@whatsapp-number"
-  }
+  {
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "outputDirectory": "dist"
+}
 }
