@@ -1,0 +1,36 @@
+{
+  "name": "Referral",
+  "type": "object",
+  "properties": {
+    "referral_code": {
+      "type": "string",
+      "description": "Unique referral code"
+    },
+    "owner_email": {
+      "type": "string",
+      "description": "Email of the person who created the referral"
+    },
+    "owner_name": {
+      "type": "string",
+      "description": "Name of the referrer"
+    },
+    "times_used": {
+      "type": "number",
+      "default": 0,
+      "description": "How many times the code has been used"
+    },
+    "discount_percent": {
+      "type": "number",
+      "default": 10,
+      "description": "Discount percentage for the referred friend"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "referral_code",
+    "owner_email"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "CustomRequest",
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "description": "What meal they want"
+    },
+    "dietary_notes": {
+      "type": "string",
+      "description": "Dietary requirements or preferences"
+    },
+    "serving_size": {
+      "type": "string",
+      "enum": [
+        "1 person",
+        "2 people",
+        "4 people",
+        "6+ people"
+      ],
+      "default": "1 person"
+    },
+    "preferred_date": {
+      "type": "string",
+      "format": "date",
+      "description": "When they want the meal"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "customer_email": {
+      "type": "string"
+    },
+    "customer_phone": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "quoted",
+        "accepted",
+        "preparing",
+        "delivered",
+        "cancelled"
+      ],
+      "default": "pending"
+    },
+    "quoted_price": {
+      "type": "number",
+      "description": "Price quoted by the business"
+    }
+  },
+  "required": [
+    "description",
+    "customer_name",
+    "customer_email"
+  ]
+}

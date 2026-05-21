@@ -1,0 +1,40 @@
+{
+  "name": "Review",
+  "type": "object",
+  "properties": {
+    "customer_name": {
+      "type": "string"
+    },
+    "customer_email": {
+      "type": "string"
+    },
+    "overall_rating": {
+      "type": "number",
+      "description": "Overall rating 1-5"
+    },
+    "food_quality_rating": {
+      "type": "number",
+      "description": "Food quality rating 1-5"
+    },
+    "delivery_rating": {
+      "type": "number",
+      "description": "Delivery experience rating 1-5"
+    },
+    "service_rating": {
+      "type": "number",
+      "description": "Customer service rating 1-5"
+    },
+    "comment": {
+      "type": "string",
+      "description": "Written review"
+    },
+    "order_id": {
+      "type": "string",
+      "description": "Related order ID if applicable"
+    }
+  },
+  "required": [
+    "customer_name",
+    "overall_rating"
+  ]
+}

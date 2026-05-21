@@ -1,0 +1,47 @@
+{
+  "name": "MenuItem",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the dish"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the dish"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price in ZAR"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "starters",
+        "mains",
+        "sides",
+        "desserts",
+        "beverages",
+        "birthday_cakes",
+        "cupcakes",
+        "platters",
+        "treats"
+      ],
+      "description": "Menu category"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL of the dish image"
+    },
+    "available": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the item is currently available"
+    }
+  },
+  "required": [
+    "name",
+    "price",
+    "category"
+  ]
+}

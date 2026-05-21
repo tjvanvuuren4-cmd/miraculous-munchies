@@ -1,0 +1,123 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "description": "List of ordered items",
+      "items": {
+        "type": "object",
+        "properties": {
+          "menu_item_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "quantity": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "custom_requests": {
+      "type": "array",
+      "description": "Custom meal requests included in this order",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "estimated_price": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "fulfillment_type": {
+      "type": "string",
+      "enum": [
+        "collection",
+        "delivery"
+      ],
+      "default": "collection",
+      "description": "Collection or delivery"
+    },
+    "delivery_fee": {
+      "type": "number",
+      "default": 0,
+      "description": "Delivery fee charged"
+    },
+    "subtotal": {
+      "type": "number",
+      "description": "Subtotal before discount"
+    },
+    "discount_amount": {
+      "type": "number",
+      "description": "Discount applied"
+    },
+    "total": {
+      "type": "number",
+      "description": "Total amount to pay"
+    },
+    "referral_code_used": {
+      "type": "string",
+      "description": "Referral code applied"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "customer_email": {
+      "type": "string"
+    },
+    "customer_phone": {
+      "type": "string"
+    },
+    "delivery_address": {
+      "type": "string"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "eft"
+      ],
+      "default": "eft"
+    },
+    "payment_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "failed"
+      ],
+      "default": "pending"
+    },
+    "order_status": {
+      "type": "string",
+      "enum": [
+        "received",
+        "preparing",
+        "ready",
+        "delivered",
+        "cancelled"
+      ],
+      "default": "received"
+    },
+    "payment_reference": {
+      "type": "string",
+      "description": "EFT payment reference provided by customer"
+    }
+  },
+  "required": [
+    "customer_name",
+    "customer_email",
+    "total"
+  ]
+}
