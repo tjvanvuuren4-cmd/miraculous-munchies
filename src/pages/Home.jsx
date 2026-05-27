@@ -140,10 +140,13 @@ export default function Home() {
       }}
     >
       <img
-        src="/images/mm-hero.webp"
-        alt="Miraculous Munchies treats"
-        className="absolute inset-0 w-full h-full object-cover opacity-35"
-      />
+  src="/images/mm-hero.webp"
+  alt="Miraculous Munchies treats"
+  width="1400"
+  height="900"
+  fetchpriority="high"
+  className="absolute inset-0 w-full h-full object-cover opacity-35"
+/>
 
       <div className="absolute inset-0 bg-[#160617]/65" />
 
