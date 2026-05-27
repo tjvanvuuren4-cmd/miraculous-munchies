@@ -3,8 +3,9 @@ import { Outlet, Link, useLocation } from "react-router-dom";
 import { Menu, X, ShoppingCart, Home, BookOpen, MessageSquare, Gift, ClipboardList, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import logoImage from "/images/mm-logo.webp";
 import FloatingWhatsApp from "./FloatingWhatsApp";
+
+const logoImage = "/images/mm-logo.webp";
 
 const navLinks = [
   { path: "/Home", label: "Home", icon: Home },
@@ -127,7 +128,7 @@ export default function Layout() {
 >
   {/* Watermark Logo */}
   <img
-    src={logoImage}
+    src="/images/mm-logo.webp"
     alt="MM Logo"
     className="absolute left-[-20px] bottom-[0px] w-[500px] opacity-[0.035] pointer-events-none select-none"
     style={{
