@@ -18,7 +18,7 @@ export default function Home() {
 {/* Hero */}
 <section className="relative min-h-[88vh] overflow-hidden bg-[#160617] text-white">
   <motion.img
-    src="/images/mm-hero.png"
+    src="/images/mm-hero.webp"
     alt="Miraculous Munchies"
     initial={{ scale: 1.01 }}
     animate={{
@@ -140,7 +140,7 @@ export default function Home() {
       }}
     >
       <img
-        src="/images/mm-hero.png"
+        src="/images/mm-hero.webp"
         alt="Miraculous Munchies treats"
         className="absolute inset-0 w-full h-full object-cover opacity-35"
       />
